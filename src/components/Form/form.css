@@ -1,0 +1,96 @@
+@-webkit-keyframes pop-in {
+    0% { opacity: 0; -webkit-transform: scale(0.5); }
+    100% { opacity: 1; -webkit-transform: scale(1); }
+}
+@-moz-keyframes pop-in {
+    0% { opacity: 0; -moz-transform: scale(0.5); }
+    100% { opacity: 1; -moz-transform: scale(1); }
+}
+@keyframes pop-in {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
+}
+.form {
+    min-width: 250px;
+    width: 40%;
+    position: absolute;
+    right: 0;
+    top: 130px;
+    -webkit-animation:pop-in 0.5s;
+    -moz-animation:pop-in 0.5s;
+    -ms-animation:pop-in 0.5s;
+}
+.title-input {
+    margin-top: 20px;
+    padding-left: 10px;
+    height: 70px;
+}
+
+.container-btn {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+.tips {
+    max-width: 80%;
+}
+
+.circle {
+    width: 56px;
+    height: 56px;
+    position: relative;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin: 30vh auto;
+    cursor: pointer;
+    z-index: 2;
+}
+.before,
+.after {
+    content: '';
+    position: absolute;
+    width: 42px;
+    height: 2px;
+    background-color: white;
+    border-radius: 0;
+    top: 27px;
+    -webkit-transition: 150ms ease-out;
+    -moz-transition: 150ms ease-out;
+    -o-transition: 150ms ease-out;
+    transition: 150ms ease-out;
+    z-index: 0;
+}
+.before {
+    left: 7px;
+}
+.after {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    right: 7px;
+}
+.circle:hover {
+    border: 1px solid #717171;
+    padding-bottom: 1px;
+}
+.circle:hover .before {
+    -ms-transform: rotate(225deg);
+    -webkit-transform: rotate(225deg);
+    -moz-transform: rotate(225deg);
+    transform: rotate(225deg);
+    -webkit-transition: 300ms ease-in-out all;
+    -moz-transition: 300ms ease-in-out all;
+    -o-transition: 300ms ease-in-out all;
+    transition: 300ms ease-in-out all;
+
+}
+.circle:hover .after {
+    -ms-transform: rotate(-225deg);
+    -webkit-transform: rotate(-225deg);
+    -moz-transform: rotate(-225deg);
+    transform: rotate(-225deg);
+    -webkit-transition: 250ms ease-in all;
+    -moz-transition: 250ms ease-in all;
+    -o-transition: 250ms ease-in all;
+    transition: 250ms ease-in all;
+}

@@ -1,0 +1,18 @@
+.footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 65px;
+    padding: 10px 10px 0 10px !important;
+}
+.social-group {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 135px;
+    transform: translateY(11px);
+}
+.social-icon {
+    max-width: 30px;
+    max-height: 30px;
+}
